@@ -75,9 +75,6 @@ a.scroll_t {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     cursor: pointer;
 }
-img.scroll_i {
-      
-}
 nav.menu {
    display: flex;
    flex-direction: row;
@@ -88,7 +85,6 @@ nav.menu {
 nav.menu_0 {
     max-width: 100%;
     /*display: flex;*/
-    
 }
 nav.menu .menu_1 {
    display: flex;

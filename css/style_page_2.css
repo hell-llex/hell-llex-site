@@ -7,7 +7,7 @@
     
     header { /*Добавление фона в элементы*/
         height: 100vh;  
-        background-image: url('/hell-llex/images/bg.jpg');      
+        background-image: url('../images/bg.jpg');      
         background-position: center center;      
         background-repeat: no-repeat;/*Заполнение на экране*/      
         background-attachment: fixed;      
@@ -76,9 +76,6 @@
         font-weight: 300;
         font-family: 'Yanone Kaffeesatz', sans-serif;
         cursor: pointer;
-    }
-    img.scroll_i {
-          
     }
     nav.menu {
        display: flex;
