@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home_page</title>
-    <link rel="stylesheet" href="../css/style_page_0.css"> <!-- Подключение стилей CSS-->
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/style_home.css"> <!-- Подключение стилей CSS-->
+    <link rel="stylesheet" href="../css/style_header&footer.css">
     <link rel="icon" href="../images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,35 +15,35 @@
 </head>
 <body>
     <noscript>Для более корректного отображения требуется включить JavaScript!!!</noscript><!--Отображение сообщения если JS выключен-->
-    <header>
-        <nav class="menu_0">
-            <nav class="menu"> 
-                <div class="menu_1">
-                    <div class="menu_1_2"><a href="hell_page_home_0.html" target="_self">Главная</a></div>
-                    <div class="menu_1_1"><a href="hell_page_portfolio_1.html">Портфолио</a></div>
-                </div>
-                  <a href="hell_page_home_0.html" target="_self" class="">
-                        <img src="images/logo.png" 
-                        width="150px" 
-                        alt="Ждемс..."></a>
-                <div class="menu_1">
-                    <div class="menu_1_1"><a href="hell_page_contact_3.html">Контакты</a></div>
-                    <div class="menu_1_2"><a href="hell_page_aboutme_2.html">Обо мне</a></div>
-                    </div>
-                </nav>
-                <div class="button">
-                    <div ><img src="../images/But/but_top.svg" alt="" width="65pt"
-                    title="Смена языка"></div>
-                </div>
-            <div class="scroll">
-                    <p><a href="" class="scroll_t">SCROLL</a></p> 
-                    <img src="../images/svg/angle-arrow-down.svg" 
-                    alt="" class="scroll_i"
-                    width="100px"><!--Якорная ссылка для перехода на определенное место на этой же странице-->
+<header>
+    <nav class="menu_0">
+        <nav class="menu"> 
+            <div class="menu_1">
+                <div class="menu_1_2"><a href="home.html" target="_self">Главная</a></div>
+                <div class="menu_1_1"><a href="portfolio.html">Портфолио</a></div>
+            </div>
+              <a href="home.html" target="_self" class="">
+                    <img src="../images/logo.png" 
+                    width="150px" 
+                    alt="Ждемс..."></a>
+            <div class="menu_1">
+                <div class="menu_1_1"><a href="contact.html">Контакты</a></div>
+                <div class="menu_1_2"><a href="aboutme.html">Обо мне</a></div>
             </div>
         </nav>
-         <button class="sosi" onclick="clickbutton(this)">Соси</button>
-    </header>
+            <div class="button">
+                <div ><img src="../images/lang/but_top.svg" alt="" width="65pt"
+                title="Смена языка"></div>
+            </div>
+            <div class="scroll">
+                <p><a href="" class="scroll_t">SCROLL</a></p> 
+                <img src="../images/svg/angle-arrow-down.svg" 
+                alt="" class="scroll_i"
+                width="100px"><!--Якорная ссылка для перехода на определенное место на этой же странице-->
+            </div>
+    </nav>
+    <button class="sosi" onclick="clickbutton(this)">Соси</button>
+</header>
 <main>
 <div id="page_1"> <a href=""> <div class="page_main">Портреты</div> </a></div>
 <!-- <a name="scroll"></a> Сам якорь, атрибут name это название якоря -->

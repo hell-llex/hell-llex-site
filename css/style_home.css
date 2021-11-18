@@ -2,8 +2,7 @@
 margin: 0;
 padding: 0;
 }
-
-/*Верхушка*/
+/*Оставить*/
 body {
     background-image: url('../images/bg_1.jpg');      
     background-position: center center;      
@@ -12,6 +11,8 @@ body {
     background-size: cover;/*Заполнение на весь экран  */      
     background-color: #04536d;
 }
+/*Оставить*/
+
 header { /*Добавление фона в элементы*/
     height: 100vh;
     position: relative;
@@ -171,7 +172,7 @@ main {
     height: 98vh;
     margin: 2% 0%;
     border-radius: 30pt;
-    background-image: url('../images/video.jpg');      
+    background-image: url('../images/mobile.jpg');      
     background-position: center center;      
     background-repeat: no-repeat;      
     background-attachment: fixed;      
