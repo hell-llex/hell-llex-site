@@ -142,12 +142,12 @@ console.log(res + " выдрали из функции");
 
 var counter = 0;
 
-function clickbutton(numb) {
+function clickbutton(element) {
     counter++;
     console.log(counter);
-    numb.innerHTML = "Отсосал: " + counter; // inerHTML писать также КАПСОМ !!!
+    element.innerHTML = "Отсосал: " + counter; // inerHTML писать также КАПСОМ !!!
     // numb.style.background = "red"; добавление отдельных стилей
-    numb.style.cssText = "background-color: red; border-width: 5pt; border-radius: 100pt; width: 50%; height: 20%; font-size: 100pt;";
+    element.style.cssText = "background-color: red; border-width: 5pt; border-radius: 100pt; width: 50%; height: 20%; font-size: 100pt;";
     // добавлене стилей через JS
     // alert('Соси');
 }
@@ -155,14 +155,6 @@ function clickbutton(numb) {
 /* При помощи отслеживания нажатий можно сделать автоматическю фильтрацию фоток 
 на странице портфолио
 */
-
-
-
-
-
-
-
-
 
 
 

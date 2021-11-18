@@ -11,7 +11,6 @@ body {
     background-attachment: fixed;      
     background-size: cover;/*Заполнение на весь экран  */      
     background-color: #04536d;
-    
 }
 header { /*Добавление фона в элементы*/
     height: 100vh;
@@ -43,20 +42,17 @@ button.sosi {
     border-width: 10pt;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-
 div.button div {
     /*передумал и сделал через позиционирование */
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     position: absolute;
     top: 2vh;
     right: 0%;
     cursor: pointer;
     width: 80pt;
     height: 80pt;
-
     background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
     border: 0wpx solid #A4A0A0;
     box-sizing: border-box;
@@ -90,7 +86,6 @@ nav.menu {
 nav.menu_0 {
     max-width: 100%;
     /*display: flex;*/
-    
 }
 nav.menu .menu_1 {
    display: flex;
@@ -294,12 +289,9 @@ div.text_footer {
 div.glass {
     width: 600pt;
     height: 200pt;
-
     background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
     border: 0wpx solid #A4A0A0;
     box-sizing: border-box;
     backdrop-filter: blur(10pt);
     border-radius: 30pt 30pt 30pt 30pt;
 }
-
-
