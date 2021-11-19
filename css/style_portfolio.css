@@ -8,9 +8,6 @@ font-family: 'Pacifico', cursive; *400*
 font-family: 'Train One', cursive; *400*
 font-family: 'Yanone Kaffeesatz', sans-serif; *от 200 до 700*
 */
-
-/*Верхушка*/
-
 body {
     width: 100%;
     background-image: url('../images/bg_2.jpg');      
@@ -19,44 +16,6 @@ body {
     background-attachment: fixed;      
     background-size: cover;/*Заполнение на весь экран  */      
     background-color: #04536d;
-}
-header { /*Добавление фона в элементы*/
-    height: 100vh;
-    position: relative;
-    
-}
-header a {
-    text-decoration: none;
-    color: black;
-    font-size: 30pt;
-    font-weight: 400;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    cursor: pointer;
-}
-header a:hover {
-    color: rgb(207, 207, 207);
-    text-decoration: none;
-    cursor: pointer;
-}
-div.button div {
-    /* передумал и сделал через позиционирование 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-grow: 1;
-    */ 
-    position: absolute;
-    top: 2vh;
-    right: 0%;
-    cursor: pointer;
-    width: 80pt;
-    height: 80pt;
-
-    background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
-    border: 0px solid #A4A0A0;
-    box-sizing: border-box;
-    backdrop-filter: blur(10pt);
-    border-radius: 30px 0px 0px 30px;    
 }
 div.scroll {
     position: absolute;
@@ -75,36 +34,6 @@ a.scroll_t {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     cursor: pointer;
 }
-nav.menu {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   padding-top: 15pt;
-}
-nav.menu_0 {
-    max-width: 100%;
-    /*display: flex;*/
-}
-nav.menu .menu_1 {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-}
-div.menu_1_1 {
-    width: 140px;
-    margin: 10px;
-    text-align: center;
-}
-div.menu_1_2 {
-    width: 105px;
-    margin: 10px;
-    text-align: center;
-}
-
-/*Середина*/
-
 main {
     /*display: flex;
     flex-direction: row;
@@ -241,83 +170,7 @@ div.lenta div{
     grid-column: 2/4;
 }*/
 
-/*Нижняя часть*/
-
-footer {
-    height: 240pt;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-} 
-footer a {
-    text-decoration: none;
-    color: black;
-    font-size: 30pt;
-    font-weight: 400;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    cursor: pointer;
-}
-footer a:hover {
-    color: rgb(207, 207, 207);
-    text-decoration: none;
-    cursor: pointer;
-}
-div.footer {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   margin-top: 10pt;
-}
-div.footer_0 {
-    width: 100%;
-}
-div.footer .menu_1  {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-}
-div.social_link {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-a.link {
-    margin: 0 10pt;
-    cursor: pointerd;
-}
 /*Блок с ссылками*/
 /*div.social_link:hover a.link:not(:hover){
     opacity: 0.5;
 }*/
-/* тоже самое что и снизу*/
-div.social_link:hover a.link {
-    opacity: 0.5;
-}
-div.social_link:hover a.link:hover {
-    opacity: 0.9;
-}
-/*Текст снизу*/
-div.text_footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Pacifico', cursive;
-    text-decoration: none;
-    color: #000;
-    font-size: 30pt;
-    font-weight: 400;
-}
-div.glass {
-    width: 600pt;
-    height: 200pt;
-
-    background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
-    box-sizing: border-box;
-    backdrop-filter: blur(10pt);
-    border-radius: 30pt 30pt 30pt 30px;
-}
