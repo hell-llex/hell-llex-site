@@ -104,9 +104,14 @@ div.filter_lenta {
     height: auto;
     padding-bottom: 2%;
     display: grid;
+    grid-gap: 20pt;/*отступы между ячейками*/
+    grid-template-columns: repeat(auto-fit, minmax(200pt, 1fr));
+    /*repeat для повторения, auto-fit автоматическое количество, minmax минимальное и максимальное значение*/
+    grid-auto-rows: auto;
+    /*display: grid;
     grid-gap: 20pt;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr;*/
     /*grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr); для медиа запроса под мобилу*/
 }
@@ -121,7 +126,7 @@ div.lenta {
     width: 100%;
     display: grid;
     grid-gap: 20pt;/*отступы между ячейками*/
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300pt, 1fr));
     /*repeat для повторения, auto-fit автоматическое количество, minmax минимальное и максимальное значение*/
     grid-auto-rows: auto; 
     /*auto добовляет автоматические сторки от колличества контента*/
