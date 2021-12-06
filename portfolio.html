@@ -5,51 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../css/style_portfolio.css"> <!-- Подключение стилей CSS-->
-    <link rel="stylesheet" href="../css/style_header&footer.css">
-    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="css/style_portfolio.css"> <!-- Подключение стилей CSS-->
+    <link rel="stylesheet" href="css/style_header&footer.css">
+    <link rel="stylesheet" href="css/style_black&white.css">
+    <link rel="icon" href="images/theme/black/logo_black.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Pacifico&family=Train+One&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-<header>
-    <nav class="menu_0">
-        <nav class="menu"> 
-            <div class="menu_1">
-                <div class="menu_1_2"><a href="home.html" target="_self">Главная</a></div>
-                <div class="menu_1_1"><a href="portfolio.html">Портфолио</a></div>
-            </div>
-              <a href="home.html" target="_self" class="">
-                    <img src="../images/logo.png" 
-                    width="150px" 
-                    alt="Ждемс..."></a>
-            <div class="menu_1">
-                <div class="menu_1_1"><a href="contact.html">Контакты</a></div>
-                <div class="menu_1_2"><a href="aboutme.html">Обо мне</a></div>
-            </div>
+<body class="body" id="bodyPortfolioWhite">
+    <header>
+        <nav class="menu_0">
+            <nav class="menu" id="menuWhite"> 
+                <div class="menu_1">
+                    <div class="menu_1_2"><a href="index.html" target="_self">Главная</a></div>
+                    <div class="menu_1_1"><a href="portfolio.html">Портфолио</a></div>
+                </div>
+                <a href="index.html"><div class="logoHead" id="headerLogoWhite"></div></a>
+                <div class="menu_1">
+                    <div class="menu_1_1"><a href="contact.html">Контакты</a></div>
+                    <div class="menu_1_2"><a href="aboutme.html">Обо мне</a></div>
+                </div>
+            </nav> 
+            <a href="#pageLink_1" class="scroll" id="scroll">
+                <p class="scroll_t" id="scrollText">SCROLL</p> 
+                <div class="scrollArrow" id="scrollArrow"> </div>
+            </a><!--Якорная ссылка для перехода на определенное место на этой же странице-->
         </nav>
-            <div class="button">
-                <div ><img src="../images/lang/but_top.svg" alt="" width="65pt"
-                title="Смена языка"></div>
-            </div>
-            <div class="scroll">
-                <p><a href="" class="scroll_t">SCROLL</a></p> 
-                <a href="" class="scroll_i">
-                    <img src="../images/svg/angle-arrow-down.svg" alt="" class="scroll_i0">
-                    <img src="../images/svg/angle-arrow-down.svg" alt="" class="scroll_i1">
-                <!--Якорная ссылка для перехода на определенное место на этой же странице-->
-                </a>
-            </div>
-    </nav>
 </header>
 <main>
 <div class="filter_lenta">
-    <button id="button_f_1" class="button_filter"> <img src="../images/all.jpg" alt=""> <a href="">Все</a> </button>
-    <button id="button_f_2" class="button_filter"> <img src="../images/portrait.jpg" alt=""> <a href="">Портреты</a> </button>
-    <button id="button_f_3" class="button_filter"> <img src="../images/plans.jpg" alt=""> <a href="">Пейзажи</a> </button>
-    <button id="button_f_4" class="button_filter"> <img src="../images/i_am.jpg" alt=""> <a href="">Это я</a> </button>
-    <button id="button_f_5" class="button_filter"> <img src="../images/mobile.jpg" alt=""> <a href="">Мобильные</a> </button> 
+    <button id="button_f_1" class="button_filter"> <img src="images/theme/all.jpg" alt=""> <a href="">Все</a> </button>
+    <button id="button_f_2" class="button_filter"> <img src="images/theme/portrait.jpg" alt=""> <a href="">Портреты</a> </button>
+    <button id="button_f_3" class="button_filter"> <img src="images/theme/plans.jpg" alt=""> <a href="">Пейзажи</a> </button>
+    <button id="button_f_4" class="button_filter"> <img src="images/theme/i_am.jpg" alt=""> <a href="">Это я</a> </button>
+    <button id="button_f_5" class="button_filter"> <img src="images/theme/mobile.jpg" alt=""> <a href="">Мобильные</a> </button> 
 </div>
 <div class="lenta"> 
    <!--<div id="i1"><img src="images/portfolio/_DSC3217.jpg" alt="" class="img_lenta" ></div>
@@ -68,27 +58,27 @@
     <div id="i14">14</div>
     <div id="i15">15</div>
     <div id="i16">16</div>-->
-    <img src="../images/portfolio/landscapes/_DSC3217.jpg" alt="" class="img_lenta" id="i1">
-    <img src="../images/portfolio/landscapes/_DSC3215.jpg" alt="" class="img_lenta" id="i2">
-    <img src="../images/portfolio/landscapes/_DSC1162.jpg" alt="" class="img_lenta" id="i3">
-    <img src="../images/portfolio/landscapes/_DSC1157.jpg" alt="" class="img_lenta" id="i4">
-    <img src="../images/portfolio/landscapes/_DSC1165.jpg" alt="" class="img_lenta" id="i5">
-    <img src="../images/portfolio/landscapes/_DSC1206.jpg" alt="" class="img_lenta" id="i6">
-    <img src="../images/portfolio/landscapes/_DSC1719.jpg" alt="" class="img_lenta" id="i4">
-    <img src="../images/portfolio/landscapes/_DSC1748.jpg" alt="" class="img_lenta" id="i5">
-    <img src="../images/portfolio/landscapes/_DSC1774.jpg" alt="" class="img_lenta" id="i6">
+    <img src="images/portfolio/landscapes/_DSC3217.jpg" alt="" class="img_lenta" id="i1">
+    <img src="images/portfolio/landscapes/_DSC3215.jpg" alt="" class="img_lenta" id="i2">
+    <img src="images/portfolio/landscapes/_DSC1162.jpg" alt="" class="img_lenta" id="i3">
+    <img src="images/portfolio/landscapes/_DSC1157.jpg" alt="" class="img_lenta" id="i4">
+    <img src="images/portfolio/landscapes/_DSC1165.jpg" alt="" class="img_lenta" id="i5">
+    <img src="images/portfolio/landscapes/_DSC1206.jpg" alt="" class="img_lenta" id="i6">
+    <img src="images/portfolio/landscapes/_DSC1719.jpg" alt="" class="img_lenta" id="i4">
+    <img src="images/portfolio/landscapes/_DSC1748.jpg" alt="" class="img_lenta" id="i5">
+    <img src="images/portfolio/landscapes/_DSC1774.jpg" alt="" class="img_lenta" id="i6">
     
 </div>
 </main>
 <footer>
     <div class="glass">
         <div class="footer_0">
-            <div class="footer"> 
+            <div class="footer" id="footerWhite"> 
                 <div class="menu_1">
-                    <div class="menu_1_2"><a href="home.html" target="_self">Главная</a></div>
+                    <div class="menu_1_2"><a href="index.html" target="_self">Главная</a></div>
                     <div class="menu_1_1"><a href="portfolio.html">Портфолио</a></div>
                 </div>
-                <a href="home.html" target="_self" class=""><img src="../images/logo.png" width="150px" alt="Ждемс..."></a>
+                <a href="index.html"><div class="logoFoot" id="footerLogoWhite"></div></a>
                 <div class="menu_1">
                     <div class="menu_1_1"><a href="contact.html">Контакты</a></div>
                     <div class="menu_1_2"><a href="aboutme.html">Обо мне</a></div>
@@ -96,31 +86,21 @@
             </div>
             <div class="social_link" width="50%"> 
                 <a href="https://www.instagram.com/hell_llex/" class="link">
-                    <img src="../images/svg/instagram_logo_icon_186929.svg" alt="Ждемс..."
-                    width="60pt" 
-                    title="Instagram"></a>
-                <a href="https://t.me/hell_llex" class="link">
-                    <img src="../images/svg/telegram_logo_icon_186924.svg"  alt="Ждемс..."
-                    width="60pt" 
-                    title="Telegram"></a>
+                    <div class="socialIconI" id="instagramWhite"></div></a>
+                <a href="https://t.me/hell_llex" class="link" >
+                    <div class="socialIconT" id="telegramWhite"></div></a>
                 <a href="https://vk.com/hell_llex" class="link">
-                    <img src="../images/svg/vk_logo_icon_186923.svg"  alt="Ждемс..."
-                    width="60pt" 
-                    title="Vkontakte"></a>
+                    <div class="socialIconV" id="vkWhite"></div></a>
                 <a href="https://music.yandex.by/users/demeshenko.sasha/playlists/3" class="link">
-                    <img src="../images/svg/yandex_cyr_icon-icons.com_59870.svg"  alt="Ждемс..."
-                    width="60pt" 
-                    title="Yandex.music"></a>
+                    <div class="socialIconY" id="yandexWhite"></div></a>
                 <a href="https://www.behance.net/hell_llex" class="link">
-                    <img src="../images/svg/behance_logo_icon_186918.svg"  alt="Ждемс..."
-                    width="60pt" 
-                    title="Behance"></a>
+                    <div class="socialIconB" id="behanceWhite"></div></a>
             </div>
-    <!--<iframe frameborder="0" style="border:none;width:100%;height:370px;" width="100%" height="370" src="https://music.yandex.by/iframe/#playlist/demeshenko.sasha/3">Слушайте <a href='https://music.yandex.by/users/demeshenko.sasha/playlists/3'>Мне нравится</a> — <a href='https://music.yandex.by/users/demeshenko.sasha'>Александр Д.</a> на Яндекс.Музыке</iframe>
-    -->
-    <div class="text_footer"><p>Сайт сделан при помощи меня :3</p></div>
+            <div class="text_footer" id="footerTextWhite"><p>Сайт сделан при помощи меня :3</p></div>
         </div>
     </div>
 </footer>
+<div class="themeBut" id="themeButtonWhite"></div>
+<script src="JS/page_0.1.js"></script>
 </body>
 </html>

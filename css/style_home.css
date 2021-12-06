@@ -2,15 +2,14 @@
 margin: 0;
 padding: 0;
 }
-body {
-    background-image: url('../images/bg_1.jpg');      
+body {    
     background-position: center center;      
     background-repeat: no-repeat;/*Заполнение на экране*/      
     background-attachment: fixed;      
     background-size: cover;/*Заполнение на весь экран  */      
-    background-color: #04536d;
+    background-color: #04536d; 
 }
-button.sosi {
+button.sosi { /*---------------DELETE----------------*/
     position: absolute;
     top: 50%;
     left: 25%;
@@ -32,14 +31,14 @@ main {
     backdrop-filter: blur(10pt);
     border-radius: 30pt;
     width: 100%;
-    padding: 0.5% 2%;
+    padding: 5pt 20pt;
 }
 #page_1 {
     width: 100%;
-    height: 94vh;
-    margin: 2% 0%;
+    height: 96vh;
+    margin: 20pt 0pt;
     border-radius: 30pt;
-    background-image: url('../images/portrait.jpg');      
+    background-image: url('../images/theme/portrait.jpg');      
     background-position: center center;      
     background-repeat: no-repeat;      
     background-attachment: fixed;      
@@ -51,12 +50,20 @@ main {
     align-items: center;
     text-decoration: none;
 }
+.pageLink { /*Ссылка элемента старницы в отдельном блоке, чтобы при скроле через якорь она была посередине*/
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
 #page_2 {
     width: 100%;
-    height: 94vh;
-    margin: 2% 0%;
+    height: 96vh;
+    margin: 20pt 0pt;
     border-radius: 30pt;
-    background-image: url('../images/plans.jpg');      
+    background-image: url('../images/theme/plans.jpg');      
     background-position: center center;      
     background-repeat: no-repeat;      
     background-attachment: fixed;      
@@ -69,10 +76,10 @@ main {
 }
 #page_3 {
     width: 100%;
-    height: 94vh;
-    margin: 2% 0%;
+    height: 96vh;
+    margin: 20pt 0pt;
     border-radius: 30pt;
-    background-image: url('../images/i_am.jpg');      
+    background-image: url('../images/theme/i_am.jpg');      
     background-position: center center;      
     background-repeat: no-repeat;      
     background-attachment: fixed;      
@@ -85,10 +92,10 @@ main {
 }
 #page_4 {
     width: 100%;
-    height: 94vh;
-    margin: 2% 0%;
+    height: 96vh;
+    margin: 20pt 0pt;
     border-radius: 30pt;
-    background-image: url('../images/mobile.jpg');      
+    background-image: url('../images/theme/mobile.jpg');      
     background-position: center center;      
     background-repeat: no-repeat;      
     background-attachment: fixed;      
@@ -99,7 +106,7 @@ main {
     justify-content: center;
     align-items: center;    
 }
-div.page_main a {
+div a {
     text-decoration: none;
 }
 /*
@@ -136,3 +143,80 @@ font-family: 'Yanone Kaffeesatz', sans-serif; *от 200 до 700*
     opacity: 0.5;
 }*/
 /* тоже самое что и снизу*/
+
+.testDiv { /*---------------DELETE----------------*/
+    position: relative;
+    left: 17%;
+    background-color: greenyellow;
+    width: 66%;
+    height: 200pt;
+    border-width: 10pt;
+    border-radius: 10pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#testAnim, div.test  { /*---------------DELETE----------------*/
+    color: blue;
+    background-color: crimson;
+    width: 20%;
+    border-width: 10pt;
+    border-radius: 10pt;
+    font-size: 60pt;
+    font-weight: 600;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-transform: uppercase;
+    margin: 10pt;
+    padding: 10pt;
+
+    position: relative;
+}
+#testAnim {
+    animation-name: Arrow1; /*Имя анимации для привязки к элементу*/
+    animation-duration: 3s; /*Время анимации*/
+    animation-timing-function: inline; /*Сценарий развития анимаций между ключивыми кадрами*/
+    animation-iteration-count: 2; /*Количкство повторов ключевых кадров в разах. infinite - анимация бесконечно*/
+    animation-direction: alternate; /*Тип и направление воспроизведения ключевых кадров*/
+    animation-play-state: running; /*Запуск или остановка анимации оп определенному событию наведение мыши и т.д.*/
+    animation-delay: 0s; /*Задержка перед началом анимации*/
+    animation-fill-mode: none; /*Применяемые свойства по завершению анимации*/
+
+}
+#testAnim2:hover, #testAnim:hover {
+    animation-name: Arrow2; /*Имя анимации для привязки к элементу*/
+    animation-duration: 3s; /*Время анимации*/
+    animation-timing-function: inline; /*Сценарий развития анимаций между ключивыми кадрами*/
+    animation-iteration-count: 2; /*Количкство повторов ключевых кадров в разах. infinite - анимация бесконечно*/
+    animation-direction: alternate; /*Тип и направление воспроизведения ключевых кадров*/
+    animation-play-state: running; /*Запуск или остановка анимации оп определенному событию наведение мыши и т.д.*/
+    animation-delay: 0s; /*Задержка перед началом анимации*/
+    animation-fill-mode: none; /*Применяемые свойства по завершению анимации*/
+
+}
+        
+@keyframes Arrow1{
+
+    0% {
+        top: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        top: 300px;
+    }
+}
+@keyframes Arrow2{
+
+    0% {
+        top: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        top: 300px;
+    }
+}

@@ -1,11 +1,12 @@
 *{ /*Убрать отступы с сайта*/
 margin: 0;
 padding: 0;
+scroll-behavior: smooth; /*для плавной прокрутки по якорным ссылкам*/
 }
 
 /*Верхушка*/
 
-header { /*Добавление фона в элементы*/
+header {
     height: 100vh;
     position: relative;
 }
@@ -22,23 +23,23 @@ header { /*Добавление фона в элементы*/
     text-decoration: none;
     cursor: pointer;
 }
-div.button div {
-    /* передумал и сделал через позиционирование 
+.themeBut {
+    background-position: center center;      
+    background-repeat: no-repeat;/*Заполнение на экране*/      
+    background-attachment: local; 
+    background-size: 60pt ;/*Заполнение на весь экран  */   
+}
+div.themeBut {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-grow: 1;
-    */ 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    top: 2vh;
+    position: fixed;
+    top: 0.8vh;
     right: 0%;
     cursor: pointer;
     width: 80pt;
     height: 80pt;
-    background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
+    /*background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);*/
     border: 0wpx solid #A4A0A0;
     box-sizing: border-box;
     backdrop-filter: blur(10pt);
@@ -70,35 +71,54 @@ div.menu_1_2 {
     margin: 10px;
     text-align: center;
 }
-div.scroll {
+.logoHead, .logoFoot {
+    width: 113pt;
+    height: 60pt; 
+    background-position: center center;      
+    background-repeat: no-repeat;/*Заполнение на экране*/      
+    background-attachment: local;
+}
+
+#scroll {
     position: absolute;
-    bottom: 2%;
+    text-decoration: none;
+    bottom: 1.5%;
     left: 47.3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-a.scroll_i {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-img.scroll_i0 {
-    width: 80pt;
-}
-img.scroll_i1 {
-    margin-top: -10pt;
-    width: 70pt;
-}
-a.scroll_t {
+.scroll_t {
     text-decoration: none;
     color: whitesmoke;
     font-size: 30pt;
-    font-weight: 300;
+    font-weight: 400;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     cursor: pointer;
+}
+.scrollArrow {
+    width: 60pt;
+    height: 30pt; 
+    position: relative;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' id='Слой_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 257.6 122.8' style='enable-background:new 0 0 257.6 122.8' xml:space='preserve'%3e%3cstyle%3e.st0%7bfill:%23f5f5f5;stroke:%23f5f5f5;stroke-width:3;stroke-linecap:round;stroke-linejoin:round%7d%3c/style%3e%3cpath class='st0' d='M256.1 4.4c0 1.1-.6 2-1.5 2.5L130.4 78.8c-.9.5-2.1.5-3 0L3 7c-.9-.5-1.5-1.5-1.5-2.5 0-.5.1-1 .4-1.5.8-1.4 2.6-1.9 4-1.1l122.9 71 123-71c1.4-.8 3.2-.3 4 1.1.2.4.3.9.3 1.4z' id='Слой_2_00000048492862176572096350000012330247893887996563_'/%3e%3cpath class='st0' d='M249.2 48.1c0 1-.5 1.9-1.4 2.4l-117.5 68c-.9.5-2 .5-2.8 0L9.8 50.6c-.8-.5-1.4-1.4-1.4-2.3 0-.5.1-1 .4-1.4.8-1.3 2.5-1.8 3.8-1L128.8 113l116.3-67.2c1.3-.8 3-.3 3.8 1 .2.4.3.9.3 1.3z' id='Слой_2-2'/%3e%3c/svg%3e");
+    background-position: center center;      
+    background-repeat: no-repeat;   
+    background-attachment: local;
+}
+.scrollArrow {
+    animation-name: arrowAnimation; /*Имя анимации для привязки к элементу*/
+    animation-duration: 400ms; /*Время анимации*/
+    animation-timing-function: inline; /*Сценарий развития анимаций между ключивыми кадрами*/
+    animation-iteration-count: 2; /*Количкство повторов ключевых кадров в разах. infinite - анимация бесконечно*/
+    animation-direction: alternate; /*Тип и направление воспроизведения ключевых кадров. Реверс туда и обратно и т.д.*/
+    animation-play-state: running; /*Запуск или остановка анимации оп определенному событию наведение мыши и т.д.*/
+    animation-delay: 1000ms; /*Задержка перед началом анимации*/
+    animation-fill-mode: none; /*Применяемые свойства по завершению анимации*/
+}
+@keyframes arrowAnimation {
+    0% {top: 0px;}
+    100% {top: 10px;}
 }
 /*
 text-transform: uppercase - трансформация текста 
@@ -116,7 +136,7 @@ font-family: 'Yanone Kaffeesatz', sans-serif; *от 200 до 700*
 
 /*Нижняя часть*/
 
-footer { /*Добавление фона в элементы*/
+footer {
     height: 240pt;
     display: flex;
     flex-direction: row;
@@ -141,7 +161,7 @@ div.footer {
    flex-direction: row;
    justify-content: center;
    align-items: center;
-   margin-top: 10pt;
+   margin: 10pt 0pt;
 }
 div.footer_0 {
     width: 100%;
@@ -158,9 +178,12 @@ div.social_link {
     justify-content: center;
     align-items: center;
 }
-a.link {
+.link {
     margin: 0 10pt;
     cursor: pointerd;
+    width: 45pt;
+    height: 45pt;
+    
 }
 /*Блок с ссылками*/
 /*div.social_link:hover a.link:not(:hover){
@@ -172,6 +195,39 @@ div.social_link:hover a.link {
 }
 div.social_link:hover a.link:hover {
     opacity: 0.9;
+}
+.socialIconI, .socialIconT, .socialIconV, .socialIconY, .socialIconB {
+    width: 45pt;
+    height: 45pt;
+}
+
+#in7 {
+    color: blue;
+    background-color: crimson;
+    width: 20%;
+    border-width: 10pt;
+    border-radius: 10pt;
+    font-size: 60pt;
+    font-weight: 600;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-transform: uppercase;
+    margin: 10pt;
+    padding: 10pt;
+    position: relative;
+}
+#in8 {
+    color: red;
+    background-color: blue;
+    width: 20%;
+    border-width: 10pt;
+    border-radius: 10pt;
+    font-size: 60pt;
+    font-weight: 600;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-transform: uppercase;
+    margin: 10pt;
+    padding: 10pt;
+    position: relative;
 }
 /*Текст снизу*/
 div.text_footer {
