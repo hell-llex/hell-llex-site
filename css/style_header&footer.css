@@ -24,12 +24,6 @@ header {
     cursor: pointer;
 }
 .themeBut {
-    background-position: center center;      
-    background-repeat: no-repeat;/*Заполнение на экране*/      
-    background-attachment: local; 
-    background-size: 60pt ;/*Заполнение на весь экран  */   
-}
-div.themeBut {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,13 +31,26 @@ div.themeBut {
     top: 0.8vh;
     right: 0%;
     cursor: pointer;
-    width: 80pt;
-    height: 80pt;
-    /*background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);*/
+    width: 75pt;
+    height: 75pt;
+
+    background-position: center center;      
+    background-repeat: no-repeat;
+    background-attachment: local; 
+    background-size: 60%;
+    
+    background: whitesmoke;
+    border-radius: 20pt 0px 0px 20pt; 
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    
+    /*background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
     border: 0wpx solid #A4A0A0;
     box-sizing: border-box;
-    backdrop-filter: blur(10pt);
-    border-radius: 20pt 0px 0px 20pt;    
+    backdrop-filter: blur(10pt);*/
+       
 }
 nav.menu {
    display: flex;
@@ -200,35 +207,6 @@ div.social_link:hover a.link:hover {
     width: 45pt;
     height: 45pt;
 }
-
-#in7 {
-    color: blue;
-    background-color: crimson;
-    width: 20%;
-    border-width: 10pt;
-    border-radius: 10pt;
-    font-size: 60pt;
-    font-weight: 600;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    text-transform: uppercase;
-    margin: 10pt;
-    padding: 10pt;
-    position: relative;
-}
-#in8 {
-    color: red;
-    background-color: blue;
-    width: 20%;
-    border-width: 10pt;
-    border-radius: 10pt;
-    font-size: 60pt;
-    font-weight: 600;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    text-transform: uppercase;
-    margin: 10pt;
-    padding: 10pt;
-    position: relative;
-}
 /*Текст снизу*/
 div.text_footer {
     display: flex;
@@ -244,6 +222,14 @@ div.text_footer {
 div.glass {
     width: 600pt;
     height: 200pt;
+
+    background: whitesmoke;
+    border-radius: 30pt;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+
     background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
     box-sizing: border-box;
     backdrop-filter: blur(10pt);

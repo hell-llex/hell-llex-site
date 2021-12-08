@@ -2,6 +2,12 @@
 margin: 0;
 padding: 0;
 }
+/*Шрифты от гугл
+font-family: 'Caveat', cursive; *от 400 до 700*
+font-family: 'Pacifico', cursive; *400*
+font-family: 'Train One', cursive; *400*
+font-family: 'Yanone Kaffeesatz', sans-serif; *от 200 до 700*
+*/
 body {    
     background-position: center center;      
     background-repeat: no-repeat;/*Заполнение на экране*/      
@@ -9,29 +15,62 @@ body {
     background-size: cover;/*Заполнение на весь экран  */      
     background-color: #04536d; 
 }
-button.sosi { /*---------------DELETE----------------*/
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    background-color: cadetblue;
-    border-radius: 10pt;
-    width: 50%;
-    height: 25%;
+.techWork { /*---------------DELETE----------------*/
+    position: relative;
+    top: 10%;
+    left: 15%;
+    padding: 10pt;
+    background: whitesmoke;
+    border-radius: 30pt;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    max-width: 70%;
+    min-width: 700px;
+    min-height: 30%;
     cursor: pointer;
-    font-size: 150pt;
-    border-width: 10pt;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 24pt;
+    font-family: 'Pacifico', cursive; 
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+}
+.hands {
+    margin: 10% 5pt 0 5pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 main {
     display: block;
     flex-direction: row;
     justify-content: center;
+    
+    background: whitesmoke;
+    border-radius: 30pt;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    
+    /*
     background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
     box-sizing: border-box;
     backdrop-filter: blur(10pt);
-    border-radius: 30pt;
-    width: 100%;
+    border-radius: 30pt;*/
+    max-width: 100%;
     padding: 5pt 20pt;
+}
+.mainPage {
+    background: whitesmoke;
+    border-radius: 30pt;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
 #page_1 {
     width: 100%;
@@ -132,12 +171,7 @@ main a:hover {
     text-decoration: none;
     cursor: pointer;
 }
-/*Шрифты от гугл
-font-family: 'Caveat', cursive; *от 400 до 700*
-font-family: 'Pacifico', cursive; *400*
-font-family: 'Train One', cursive; *400*
-font-family: 'Yanone Kaffeesatz', sans-serif; *от 200 до 700*
-*/
+
 /*Блок с ссылками*/
 /*div.social_link:hover a.link:not(:hover){
     opacity: 0.5;
@@ -182,34 +216,8 @@ font-family: 'Yanone Kaffeesatz', sans-serif; *от 200 до 700*
     animation-play-state: running; /*Запуск или остановка анимации оп определенному событию наведение мыши и т.д.*/
     animation-delay: 0s; /*Задержка перед началом анимации*/
     animation-fill-mode: none; /*Применяемые свойства по завершению анимации*/
-
-}
-#testAnim2:hover, #testAnim:hover {
-    animation-name: Arrow2; /*Имя анимации для привязки к элементу*/
-    animation-duration: 3s; /*Время анимации*/
-    animation-timing-function: inline; /*Сценарий развития анимаций между ключивыми кадрами*/
-    animation-iteration-count: 2; /*Количкство повторов ключевых кадров в разах. infinite - анимация бесконечно*/
-    animation-direction: alternate; /*Тип и направление воспроизведения ключевых кадров*/
-    animation-play-state: running; /*Запуск или остановка анимации оп определенному событию наведение мыши и т.д.*/
-    animation-delay: 0s; /*Задержка перед началом анимации*/
-    animation-fill-mode: none; /*Применяемые свойства по завершению анимации*/
-
-}
-        
+}       
 @keyframes Arrow1{
-
-    0% {
-        top: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        top: 300px;
-    }
-}
-@keyframes Arrow2{
-
     0% {
         top: 0;
     }
