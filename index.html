@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Home</title>
+    <meta name="description" content="Портфоли hell_llex. Зесь собраны все работы, а так же сам сайт является частью портфолио...">
+    <!-- Почитать про OG тайтл для соц сетей -->
     <link rel="stylesheet" href="css/style_home.css"> <!-- Подключение стилей CSS-->
     <link rel="stylesheet" href="css/style_header&footer.css">
     <link rel="stylesheet" href="css/style_black&white.css">
     <link rel="stylesheet" href="css/loader.css">
-    <link rel="icon" href="images/theme/black/logo_black.png">
+    <link rel="icon" href="images/theme/black/logo_black.png" type="image/png" sizes="64x64">
+    <link rel="icon" href="images/theme/black/logo_black.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="images/theme/black/logo_black.png" type="image/png" sizes="16x16">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Pacifico&family=Train+One&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -28,14 +32,43 @@
                 <div class="menu_1_1"><a href="contact.html">Контакты</a></div>
                 <div class="menu_1_2"><a href="aboutme.html">Обо мне</a></div>
             </div>
-        </nav> 
-        <a href="#pageLink_1" class="scroll" id="scroll">
-            <p class="scroll_t" id="scrollText">SCROLL</p> 
-            <div class="scrollArrow" id="scrollArrow"> </div>
-        </a><!--Якорная ссылка для перехода на определенное место на этой же странице-->
+        </nav>
     </nav>
+    <nav class="menuMobile_0">
+        <div class="menuMobile_1"> 
+          <div class="logoMobile" id="logoMobileWhite"></div>
+        </div>
+        <div class="menuMobile_2" id="menuMobileWhite">
+          <ul class="menuList">
+              <li class="menuList_1"><a href="index.html">Главная</a></li>
+              <span class="line1" id="line1White"></span>
+              <span class="line2" id="line21White"></span>
+              <li class="menuList_2"><a href="portfolio.html">Портфолио</a></li>
+              <span class="line1" id="line2White"></span>
+              <span class="line2" id="line22White"></span>
+              <li class="menuList_3"><a href="contact.html">Контакты</a></li>
+              <span class="line1" id="line3White"></span>
+              <span class="line2" id="line23White"></span>
+              <li class="menuList_4"><a href="aboutme.html">Обо мне</a></li>
+              <span class="line1" id="line4White"></span>
+              <span class="line2" id="line24White"></span>
+              <li class="menuList_5"><div class="themeButMobile" id="themeButtonMobileWhite"></div></li>
+          </ul>
+        </div>
+        <span class="tongue">
+          <span class="arrow1-1" id="arrow1-1White"></span><span class="arrow2-1" id="arrow2-1White"></span>
+          <span class="arrow1-2" id="arrow1-2White"></span><span class="arrow2-2" id="arrow2-2White"></span>
+      </span>
+    </nav>  
+        <!--<div class="logoHeadMobile" id="headerMobileLogoWhite"></div>
+            <div class="menuMobile_1"></div>
+            <div class="menuMobile_1"></div>
+            <div class="menuMobile_1"></div>
+            <div class="menuMobile_1"></div>
+            <div class="menuMobile_1"></div><div class="menuMobile_1"></div>-->
+        
 <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->        
-<div class="techWork" id="techWorkWhite">
+<!--<div class="techWork" id="techWorkWhite">
 <p>Technical work is underway.<br> The site is under development.<br> Only 10% of the planned has been completed. <br> <b>Thanks for waiting...</b> </p>
 <div class="hands" id="hands">
  <div class="loading" id="hand0">
@@ -90,13 +123,19 @@
     </div>
 </div>
 <p>Ведутся технические работы.<br> Сайт находится в стадии разработки.<br> Выполнено только 10% от запланированного.<br> <b>Спасибо за ожидание...</b> </p> 
-</div>
+</div>-->
 <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->     
     <!--<div class="testDiv" >
         <div class="test" id="testAnim"><a href="#pageLink_1">Хуй 1</a></div>
         <div class="test" id="testAnim2"><a href="#pageLink_2">Хуй 2</a></div>
         <div class="test" id="in7"><a >Хуй 3</a></div>
     </div>-->
+  <div class="scroll_0">
+    <a href="#pageLink_1" class="scroll" id="scroll">
+              <p class="scroll_t" id="scrollText">SCROLL</p> 
+              <div class="scrollArrow" id="scrollArrow"></div>
+          </a><!--Якорная ссылка для перехода на определенное место на этой же странице-->  
+  </div>
 </header>
 <main>
 <div class="mainPage" id="page_1"> <a href="portfolio.html#button_f_2"> <div class="pageLink" id="pageLink_1">- Портреты -</div> </a></div>
@@ -136,6 +175,7 @@
     </div>
 </footer>
 <div class="themeBut" id="themeButtonWhite"></div>
+<div class="arrowUp" id="arrowUpWhite"></div>
 <script src="JS/page_0.1.js"></script>
 <!-- <script src="../JS/page_0.js"></script> -->
 <!--Лучше записывать скрипт JS в конце тега боди чтобы он обрабатывался последним-->

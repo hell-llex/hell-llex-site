@@ -6,45 +6,79 @@
     // console.info("Текст в консоле"); // вывод текста в консоле
     // console.error("Текст в консоле"); // вывод текста в консоле как ошибки
     // console.warn("Текст в консоле"); // вывод текста в консоле как предупреждения
+// ------------------------------------------------------------------LocalStorage---------------------------------------------------------------------------------
 
-    
-    
-    
+//localStorage.removeItem("themeButton"); //удаляет ключи
+
+//localStorage.setItem("themeButton", JSON.stringify(theme.id)); // JSON.stringify() переводит в строку, потому что локал может хранить элементы только в формате строк
+
+//console.log(JSON.parse(localStorage.getItem("themeButton"))); //вывод содержимого ключа
+
+//theme.id = JSON.parse(localStorage.getItem("themeButton")); // JSON.parse() переводит обратно в элемент из строки
+
 // ------------------------------------------------------------------Рабочее---------------------------------------------------------------------------------
     
     /*document.addEventListener("loadstart", function(){
         theme.id = JSON.parse(localStorage.getItem("theme"));
     }) //recoverTheme());// это проверка позиции скролла после загрузки/обновления страницы
     */
-    document.addEventListener("DOMContentLoaded", function() {
-        recoverTheme();
-    });// это проверка позиции скролла после загрузки/обновления страницы
-    
     let numbInTheme = 0;
+    let theme = document.querySelectorAll(".themeButMobile, .themeBut"); // выборка элемента кнопки смены темы .themeBut
+
+   document.addEventListener("DOMContentLoaded", function() {
+        recoverTheme();
+        
+    });// это проверка позиции скролла после загрузки/обновления страницы
+
     
+/*    
     let theme = document.querySelector(".themeBut"); // выборка элемента кнопки смены темы .themeBut
+*/
+
     
+
+
+// проверить я хуй знает что это такое 
+
     function recoverTheme() { // функция для восстановления текущей темы после обновления
-        if(localStorage.getItem("theme") == null) {
-           localStorage.setItem("theme", theme.id); 
-        } else {
-            theme.id = localStorage.getItem("theme"); // применение из локала     
-        };
-        if(localStorage.getItem("theme") == "themeButtonBlack") {
-            writeNewId();
-        }
-        numbInTheme++;
+            if(localStorage.getItem("theme") == null) { // применяю в локал значение темы
+                if(theme[1].id == "themeButtonBlack" && theme[0].id == "themeButtonMobileBlack") {
+                    localStorage.setItem("theme", "Black");
+                } else if(theme[1].id == "themeButtonWhite" && theme[0].id == "themeButtonMobileWhite") {
+                    localStorage.setItem("theme", "White");
+                };
+            } else {
+                if(localStorage.getItem("theme") == "Black") {
+                    theme[1].id = "themeButtonBlack";
+                    theme[0].id = "themeButtonMobileBlack";
+                    writeNewId();
+                } else if(localStorage.getItem("theme") == "White") {
+                    theme[1].id = "themeButtonWhite";
+                    theme[0].id = "themeButtonMobileWhite";
+                };//theme.id = localStorage.getItem("theme"); // применение из локала     
+            };
+            /*if(localStorage.getItem("theme") == "Black") {
+                writeNewId();
+            };*/
+            numbInTheme++;
     }
 
-    theme.addEventListener('click', function() {
+
+    theme[1].addEventListener('click', function() { // смена id при клике на кнопку тема
         writeNewId();// стоит первой потому что при изменении темы используется предыдущее значение кнопки 
         switchTheme();
-        
+        //localStorage.setItem("theme", theme.id);
         // еще функции для смены темы
-    }); // смена id при клике на кнопку тема
+    }); 
     
+    theme[0].addEventListener('click', function() { // смена id при клике на кнопку тема
+        writeNewId();// стоит первой потому что при изменении темы используется предыдущее значение кнопки 
+        switchTheme();
+        //localStorage.setItem("theme", theme.id);
+        // еще функции для смены темы
+    });
     
-    
+/*
     function switchTheme() { // выполнение функции смены id кнопки при клике по выбранному элементу
         if(theme.id == "themeButtonWhite") {
             theme.id = "themeButtonBlack";
@@ -52,46 +86,83 @@
             theme.id = "themeButtonWhite";
         }
         localStorage.setItem("theme", theme.id); // сохранение в локал  
-    } 
+    }
+*/
+
+    function switchTheme() { // выполнение функции смены id кнопки при клике по выбранному элементу
+            if(theme[1].id == "themeButtonWhite" && theme[0].id == "themeButtonMobileWhite") {
+                theme[0].id = "themeButtonMobileBlack";
+                theme[1].id = "themeButtonBlack";
+            } else if(theme[1].id == "themeButtonBlack" && theme[0].id == "themeButtonMobileBlack") {
+                theme[0].id = "themeButtonMobileWhite";
+                theme[1].id = "themeButtonWhite";
+            };
+            if(theme[1].id == "themeButtonBlack" && theme[0].id == "themeButtonMobileBlack") {
+                localStorage.setItem("theme", "Black");
+            } else if(theme[1].id == "themeButtonWhite" && theme[0].id == "themeButtonMobileWhite") {
+                localStorage.setItem("theme", "White");
+            }; // сохранение в локал  
+        }
+
+    
+
+
+
+
+
+    let themeElements = document.querySelectorAll('.menu, .logoHead, .body, .footer, .logoFoot, .text_footer,\
+    \.socialIconI, .socialIconT, .socialIconV, .socialIconY, .socialIconB, .menuMobile_2, .logoMobile, .line1, .line2, .arrow1-1, .arrow2-1, .arrow1-2, .arrow2-2');
+
+    function writeNewId() { //--------------------переделать и доработать
+        themeElements.forEach((elem) => {    // почитать про линейные функции
+            if(numbInTheme == 0) {
+                let textIdElementB = elem.id.slice(0, -5) + "Black";
+                elem.id = textIdElementB;
+                //console.log("-------3");
+            } else if(theme[1].id == "themeButtonBlack" && theme[0].id == "themeButtonMobileBlack" && numbInTheme > 0) {
+                let textIdElementB = elem.id.slice(0, -5) + "White";
+                elem.id = textIdElementB;
+                //console.log("---------------6");
+            } else if(theme[1].id == "themeButtonWhite" && theme[0].id == "themeButtonMobileWhite" ) {
+                let textIdElementW = elem.id.slice(0, -5) + "Black";
+                elem.id = textIdElementW;
+                //console.log("------------1");   
+            }
+        });
+            
+    }
+
+    let logoMob = document.querySelector(".logoMobile");
+    let tongue = document.querySelector(".tongue");
+    let line = document.querySelectorAll(".line1, .line2");
+    let listMenu = document.querySelectorAll(".menuList, .menuMobile_2, .arrow1-1, .arrow2-1, .arrow1-2, .arrow2-2");
+
+    logoMob.addEventListener('click', function(){ // выплыввающее меню по нажатию на логотип
+        line.forEach((elem) => {
+            elem.classList.toggle("active");       
+        });
+        listMenu.forEach((elem) => {
+            elem.classList.toggle("active");
+        });
+    });
+
+    tongue.addEventListener("click", function(){ // выплыввающее меню по нажатию на язычок // переделать в свайп
+        line.forEach((elem) => {
+            elem.classList.toggle("active");       
+        });
+        listMenu.forEach((elem) => {
+            elem.classList.toggle("active");
+        });
+    });
+
+
+
+
 // ------------------------------------------------------------------Делаю что-то---------------------------------------------------------------------------------
-/*
-let themeAll = [] = document.querySelectorAll(".", "");
 
-console.log(themeAll);*/
-
-let themeElements = document.querySelectorAll('.menu, .logoHead, .body, .footer, .logoFoot, .text_footer, .socialIconI, .socialIconT, .socialIconV, .socialIconY, .socialIconB');
 //let themeElements = document.querySelectorAll('.menuWhite, #headerLogoWhite, #themeButtonWhite, #bodyHomeWhite, #bodyPortfolioWhite, #bodyContact, #bodyAboutmeWhite, #footerWhite, #footerLogoWhite, #footerTextWhite, .socialIconI, .socialIconT, .socialIconV, .socialIconY, .socialIconB');
 //console.log(themeElements); 
 //themeElements = Array.from(themeElements); // делаем массив из элементов
-
-
-
-
-// function(elem, i , arr)
-
-function writeNewId() { //--------------------переделать и доработать
-    themeElements.forEach((elem) => {
-        if(numbInTheme == 0) {
-            let textIdElementB = elem.id.slice(0, -5) + "Black";
-            elem.id = textIdElementB;
-            //console.log("-------3");
-        } else if(theme.id == "themeButtonBlack" && numbInTheme > 0) {
-            let textIdElementB = elem.id.slice(0, -5) + "White";
-            elem.id = textIdElementB;
-            //console.log("---------------6");
-        } else if(theme.id == "themeButtonWhite") {
-            let textIdElementW = elem.id.slice(0, -5) + "Black";
-            elem.id = textIdElementW;
-            //console.log("------------1");   
-        }
-    });
-        
-}
-
-//------------------------------отловить баг
-
-
-
 
 
 /* // хуй пойми что
@@ -117,6 +188,23 @@ function writeNewId() {
 // начинаем с позиции 0 слева, а заканчиваем на позиции -5 справа. если чисто отрицательное то с начинаем с конца
 
 
+/*function switchTheme() { // выполнение функции смены id кнопки при клике по выбранному элементу
+        theme.forEach((elem) => {
+            if(theme[1].id == "themeButtonWhite" && theme[0].id == "themeButtonMobileWhite") {
+                let textIdElementW = elem.id.slice(0, -5) + "Black";
+                elem.id = textIdElementW;
+            } else if(theme[1].id == "themeButtonBlack" && theme[0].id == "themeButtonMobileBlack") {
+                let textIdElementB = elem.id.slice(0, -5) + "White";
+                elem.id = textIdElementB;
+            };
+            if(elem.id == "themeButtonWhite" && elem.id == "themeButtonMobileWhite") {
+                localStorage.setItem("theme", "White");    
+            } else if(elem.id == "themeButtonBlack" && elem.id == "themeButtonMobileBlack") {
+                localStorage.setItem("theme", "Black");
+            } 
+             // сохранение в локал    
+        })
+    }*/
 
 
 
@@ -139,32 +227,8 @@ element.id = idStr; // Применяем id
 */
 
 
-
-
-// ------------------------------------------------------------------LocalStorage---------------------------------------------------------------------------------
-
-//localStorage.removeItem("themeButton"); //удаляет ключи
-
-//localStorage.setItem("themeButton", JSON.stringify(theme.id)); // JSON.stringify() переводит в строку, потому что локал может хранить элементы только в формате строк
-
-//console.log(JSON.parse(localStorage.getItem("themeButton"))); //вывод содержимого ключа
-
-//theme.id = JSON.parse(localStorage.getItem("themeButton")); // JSON.parse() переводит обратно в элемент из строки
-
 // ------------------------------------------------------------------Пробная хуета---------------------------------------------------------------------------------
 
-
-let counter = 0;
-
-function clickbutton(numb) { //-------------DELETE-------------------------
-    counter++;
-    console.log(counter);
-    numb.innerHTML = "Сходил: " + counter; // inerHTML писать также КАПСОМ !!!
-    // numb.style.background = "red"; добавление отдельных стилей
-    numb.style.cssText = "background-color: red; border-width: 5pt; border-radius: 100pt; width: 50%; height: 20%; font-size: 100pt;";
-    // добавлене стилей через JS
-    // alert('Соси');
-}
 
 /*let clickTheme = 0;
     function switchTheme() {

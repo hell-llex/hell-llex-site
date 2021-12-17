@@ -15,8 +15,8 @@ body {
     background-size: cover;/*Заполнение на весь экран  */      
     background-color: #04536d; 
 }
-.techWork { /*---------------DELETE----------------*/
-    position: relative;
+/*.techWork { /*---------------DELETE----------------*/
+    /*position: relative;
     top: 10%;
     left: 15%;
     padding: 10pt;
@@ -43,7 +43,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
+}*/
 main {
     display: block;
     flex-direction: row;
@@ -73,7 +73,7 @@ main {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
 #page_1 {
-    width: 100%;
+    max-width: 100%;
     height: 96vh;
     margin: 20pt 0pt;
     border-radius: 30pt;
@@ -98,7 +98,7 @@ main {
     text-decoration: none;
 }
 #page_2 {
-    width: 100%;
+    max-width: 100%;
     height: 96vh;
     margin: 20pt 0pt;
     border-radius: 30pt;
@@ -114,7 +114,7 @@ main {
     align-items: center;    
 }
 #page_3 {
-    width: 100%;
+    max-width: 100%;
     height: 96vh;
     margin: 20pt 0pt;
     border-radius: 30pt;
@@ -130,7 +130,7 @@ main {
     align-items: center;    
 }
 #page_4 {
-    width: 100%;
+    max-width: 100%;
     height: 96vh;
     margin: 20pt 0pt;
     border-radius: 30pt;
@@ -158,7 +158,7 @@ line-height: 10px - расстояние между строками
 main a {
     text-decoration: none;
     color: #fff;
-    font-size: 80pt;
+    font-size: calc(30pt + 80 * (100vw / 1903)); /*80pt-40pt*/
     font-weight: 600;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     text-transform: uppercase;
@@ -182,7 +182,7 @@ main a:hover {
     position: relative;
     left: 17%;
     background-color: greenyellow;
-    width: 66%;
+    max-width: 66%;
     height: 200pt;
     border-width: 10pt;
     border-radius: 10pt;
@@ -207,7 +207,7 @@ main a:hover {
 
     position: relative;
 }
-#testAnim {
+#testAnim { /*---------------DELETE----------------*/
     animation-name: Arrow1; /*Имя анимации для привязки к элементу*/
     animation-duration: 3s; /*Время анимации*/
     animation-timing-function: inline; /*Сценарий развития анимаций между ключивыми кадрами*/
@@ -217,7 +217,7 @@ main a:hover {
     animation-delay: 0s; /*Задержка перед началом анимации*/
     animation-fill-mode: none; /*Применяемые свойства по завершению анимации*/
 }       
-@keyframes Arrow1{
+@keyframes Arrow1{ /*---------------DELETE----------------*/
     0% {
         top: 0;
     }
