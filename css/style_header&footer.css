@@ -4,6 +4,9 @@ padding: 0;
 scroll-behavior: smooth; /*для плавной прокрутки по якорным ссылкам*/
 box-sizing: border-box;
 }
+a {
+text-decoration: none;
+}
 /*------------------------------------------------------------Полезное---------------------------------------------------------------------------------------------
 @media (orientation: portrait или landscape) поворот устройства
 @media (resolution: 400dpi) разрешение экрана
@@ -92,18 +95,18 @@ header {
 .scroll_0 {
     position: relative;
     max-width: 100%;
-    top: 61%;
+    height: 60vh;
+    bottom: 10;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+
 }
 #scroll {
     width: 60pt;
     text-decoration: none;
-    /*position: absolute;
-    /*left: 50%;
-    bottom: 1%;*/
+    margin: 0% auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,13 +149,14 @@ header {
 /*Нижняя часть*/
 
 footer {
-    height: 240pt;
+    min-height: 35vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
 } 
-footer a {
+div.footer_0 a {
     text-decoration: none;
     color: black;
     font-size: 30pt;
@@ -160,30 +164,43 @@ footer a {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     cursor: pointer;
 }
-footer a:hover {
+div.footer_0 a:hover {
     color: rgb(207, 207, 207);
     text-decoration: none;
     cursor: pointer;
 }
-div.footer {
+.footer {
    display: flex;
    flex-direction: row;
    justify-content: center;
    align-items: center;
    margin: 10pt 0pt;
-   /*max-width: 550pt;*/
+   
 }
-div.footer_0 {
+.footer_0 {
     max-width: 550pt;
     padding: 0pt 25pt;
+    margin: 2% 0%;
+
+    background: whitesmoke;
+    border-radius: 30pt;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+
+    background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
+    box-sizing: border-box;
+    backdrop-filter: blur(10pt);
+    border-radius: 30pt 30pt 30pt 30pt;
 }
-div.footer .menu_1  {
+.footer .menu_1  {
    display: flex;
    flex-direction: row;
    justify-content: center;
    align-items: center;
 }
-div.social_link {
+.social_link {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -203,8 +220,8 @@ div.social_link:hover a.link:hover {
     opacity: 0.9;
 }
 .socialIconI, .socialIconT, .socialIconV, .socialIconY, .socialIconB {
-    width: 45pt;
-    height: 45pt;
+    width: 60px;
+    height: 60px;
 }
 
 div.text_footer {
@@ -218,9 +235,9 @@ div.text_footer {
     font-size: 30pt;
     font-weight: 400;
 }
-div.glass {
-    max-width: 550pt;
-    height: 200pt;
+/*.glass {
+    max-width: 750px;
+    min-height: 270px;
 
     background: whitesmoke;
     border-radius: 30pt;
@@ -233,7 +250,7 @@ div.glass {
     box-sizing: border-box;
     backdrop-filter: blur(10pt);
     border-radius: 30pt 30pt 30pt 30pt;
-}
+}*/
 
 /*----------------------------------------------Мобильное меню-------------------------------------------*/
 .menuMobile_0 {
@@ -512,6 +529,168 @@ span.arrow2-2.active {
     background-size: 90%;
 }
 
+.footerMobile_0 {
+    height: 95%;
+    width: 90vw;
+    margin: 5% 0%;
+    padding: 2.5%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:stretch;
+
+    background: whitesmoke;
+    border-radius: 20pt;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+.socialList {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.socialList li {
+    width: 100%;
+    margin: 1% 0%;
+}
+.mobileLink {
+    border-radius: 50px;
+    height: 100%;
+    padding: 0px 0px;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    background: black;
+    border-radius: 20pt;
+    background: rgba(31, 31, 31, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+.socialMobileIconI, .socialMobileIconT, .socialMobileIconV, .socialMobileIconY, .socialMobileIconB, .socialMobileIconG {
+    width: auto;
+    height: 9vh;
+    margin: 3px;
+    flex: 0 0 30%;
+    background-position: center center;      
+    background-repeat: no-repeat; 
+    background-attachment: local;
+}
+.socialList span {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-size: calc(14pt + 50 * (100vw / 800)); /*80pt-40pt*/
+    font-weight: 400;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    cursor: pointer;
+    flex: 1 1 auto;
+}
+.footerButton {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+.logoMobileFoot {
+    width: 100%;
+    height: 100%;
+
+    background-position: center center;      
+    background-repeat: no-repeat; 
+    background-attachment: local;
+    background-size: 80%;
+}
+.logoMobileBack {
+    width: 60%;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrowUp {
+    position: relative;
+    width: 30%;
+    height: 14vh;
+
+    background: black;
+    border-radius: 20pt;
+    background: rgba(31, 31, 31, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+.arrowUp a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-size: calc(18pt + 50 * (100vw / 800)); /*80pt-40pt*/
+    font-weight: 400;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    cursor: pointer;
+}
+.line31 {
+    width: 30px;
+    height: 4px; 
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    transform: translateX(-11px) rotate(-30deg);
+    border-radius: 50px 50px 0px 0px;
+}
+.line41 {
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    top: 10px;
+    z-index: 5;
+    transform: translateX(11px) rotate(30deg);
+    border-radius: 50px 50px 0px 0px;
+}
+.line32 {
+    width: 30px;
+    height: 4px; 
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+    transform: translateX(-11px) rotate(-30deg);
+    border-radius: 50px 50px 0px 0px;
+}
+.line42 {
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    top: 20px;
+    z-index: 5;
+    transform: translateX(11px) rotate(30deg);
+    border-radius: 50px 50px 0px 0px;
+}
+
 @media (max-width: 950px) { 
     .themeBut {
         top: 100pt;
@@ -526,13 +705,14 @@ span.arrow2-2.active {
         transition: all 0.5s ease 0s;
     }
 }
-
-
 @media (min-width: 750px) {
     .menuMobile_0 { /*чтобы меню не отображалось на компе*/
         /*display: none;*/ /* выключает элементы */
         /*visibility: hidden;*/ /* скрывает/делает прозрачным элементы */ 
         /*visibility: visible;*/ /* показывает/делает непрозрачным отдельный элемент из скрытых элементов */ 
+        display: none;
+    }
+    .footerMobile_0 {
         display: none;
     }
 }
@@ -568,4 +748,20 @@ span.arrow2-2.active {
         background-attachment: local; 
         background-size: 90%;
     }
+    div.text_footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Pacifico', cursive;
+        text-decoration: none;
+        color: #000;
+        font-size: calc(6pt + 28 * (100vw / 800)); /*80pt-40pt*/
+        font-weight: 400;
+    }
+    footer {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
 }
