@@ -111,7 +111,9 @@
 
 
     let themeElements = document.querySelectorAll('.menu, .logoHead, .body, .footer, .logoFoot, .text_footer,\
-    \.socialIconI, .socialIconT, .socialIconV, .socialIconY, .socialIconB, .menuMobile_2, .logoMobile, .line1, .line2, .arrow1-1, .arrow2-1, .arrow1-2, .arrow2-2');
+    \.socialIconI, .socialIconT, .socialIconV, .socialIconY, .socialIconB, .socialIconG, .menuMobile_2, .logoMobile, .logoMobileFoot,\
+    \ .line1, .line2, .arrow1-1, .arrow2-1, .arrow1-2, .arrow2-2, .socialList, .up, .line31, .line32, .line41, .line42,\
+    \ .socialMobileIconI, .socialMobileIconT, .socialMobileIconV, .socialMobileIconY, .socialMobileIconB, .socialMobileIconG ');
 
     function writeNewId() { //--------------------переделать и доработать
         themeElements.forEach((elem) => {    // почитать про линейные функции

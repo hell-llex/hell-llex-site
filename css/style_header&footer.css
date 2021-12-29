@@ -95,7 +95,7 @@ header {
 .scroll_0 {
     position: relative;
     max-width: 100%;
-    height: 60vh;
+    height: 87vh;
     bottom: 10;
     display: flex;
     justify-content: center;
@@ -219,7 +219,7 @@ div.social_link:hover a.link {
 div.social_link:hover a.link:hover {
     opacity: 0.9;
 }
-.socialIconI, .socialIconT, .socialIconV, .socialIconY, .socialIconB {
+.socialIconI, .socialIconT, .socialIconV, .socialIconY, .socialIconB, .socialIconG {
     width: 60px;
     height: 60px;
 }
@@ -764,4 +764,14 @@ span.arrow2-2.active {
         justify-content: center;
         align-items: center;
     } 
+    .scroll_0 {
+        position: relative;
+        max-width: 100%;
+        height: 73vh;
+        bottom: 10;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    
+    }
 }
