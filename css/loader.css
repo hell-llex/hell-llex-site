@@ -1,5 +1,35 @@
-/* INSPIRATION: http://drbl.in/1945392 */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+.techWork {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: scale(1.7);
+  margin: 40px 0px 10px 0px;
+}
+.hands {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+}
+@media screen and (max-width: 768px){
+  .techWork {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: scale(1);
+  margin: 20px 0px 0px 0px;
+  }
+}
+@media screen and (max-width: 425px){
+  .techWork {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: scale(0.8);
+  margin: 20px 0px 0px 0px;
+  }
+}
 .loading {
   display: flex;
   flex-direction: row;
@@ -10,7 +40,7 @@
   margin: -35px 0 0 -56px;*/
   width: 112px;
   height: 70px;
-  *zoom: 1;
+  zoom: 1;
   margin: 0 0 0 10px;
 }
 .loading:before,
@@ -1330,7 +1360,7 @@
   }
 }
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-.credits-info {
+/* .credits-info {
   position: absolute;
   left: 0;
   top: 0;
@@ -1367,4 +1397,4 @@
   -khtml-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-}
+} */

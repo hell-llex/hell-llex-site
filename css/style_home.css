@@ -1,230 +1,251 @@
 *{ /*Убрать отступы с сайта*/
-margin: 0;
-padding: 0;
-}
-/*Шрифты от гугл
-font-family: 'Caveat', cursive; *от 400 до 700*
-font-family: 'Pacifico', cursive; *400*
-font-family: 'Train One', cursive; *400*
-font-family: 'Yanone Kaffeesatz', sans-serif; *от 200 до 700*
-*/
-body {    
-    background-position: center center;      
-    background-repeat: no-repeat;/*Заполнение на экране*/      
-    background-attachment: fixed;      
-    background-size: cover;/*Заполнение на весь экран  */      
-    background-color: #04536d; 
-}
-/*.techWork { /*---------------DELETE----------------*/
-    /*position: relative;
-    top: 10%;
-    left: 15%;
-    padding: 10pt;
-    background: whitesmoke;
-    border-radius: 30pt;
-    background: rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-    max-width: 70%;
-    min-width: 700px;
-    min-height: 30%;
-    cursor: pointer;
-    font-size: 24pt;
-    font-family: 'Pacifico', cursive; 
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    /*------------------------------------------------------------Полезное---------------------------------------------------------------------------------------------
+    @media (orientation: portrait или landscape) поворот устройства
+    @media (resolution: 400dpi) разрешение экрана
+    
+    text-transform: uppercase - трансформация текста 
+    word-spacing: 20px - расстояние между словами
+    letter-spacing: 5px - рсстояние между символами
+    line-height: 10px - расстояние между строками
+    + примемнение стилей к тексту: перечеркивание, подчеркивание и т.д.
+    
+    Шрифты от гугл
+    font-family: 'Caveat', cursive; *от 400 до 700*
+    font-family: 'Pacifico', cursive; *400*
+    font-family: 'Train One', cursive; *400*
+    font-family: 'Yanone Kaffeesatz', sans-serif; *от 200 до 700*
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    
+    
+    /* background: whitesmoke;
+        border-radius: 30pt;
+        background: rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    
+        background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
+        box-sizing: border-box;
+        backdrop-filter: blur(10pt);
+        border-radius: 30pt 30pt 30pt 30pt; */
+body {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
+    background-position: center center;      
+    background-repeat: no-repeat;   
+    background-attachment: fixed;      
+    background-size: cover;
+    background-color: #04536d; 
+    background-image: url('../images/home.jpg');
 }
-.hands {
-    margin: 10% 5pt 0 5pt;
+.wrapper {
+    min-width: 55vw;
+    min-height: 85vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-}*/
-main {
-    display: block;
-    flex-direction: row;
-    justify-content: center;
-    
+    align-items: center;
+    gap: 10px;
+    padding: 50px 30px;
+
     background: whitesmoke;
     border-radius: 30pt;
     background: rgba(255, 255, 255, 0.1);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-    
-    /*
+
     background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
     box-sizing: border-box;
     backdrop-filter: blur(10pt);
-    border-radius: 30pt;*/
-    max-width: 100%;
-    padding: 5pt 20pt;
+    border-radius: 30px;
 }
-.mainPage {
+.social-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+.social-list {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 20px;
+}
+.social-list li {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    list-style: none;
+    
     background: whitesmoke;
     border-radius: 30pt;
     background: rgba(255, 255, 255, 0.1);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+
+    background: linear-gradient(180deg, rgba(210, 243, 194, 0.2) 0%, rgba(232, 238, 192, 0.096875) 51.56%, rgba(196, 196, 196, 0) 100%);
+    box-sizing: border-box;
+    backdrop-filter: blur(10pt);
+    border-radius: 30px;
 }
-#page_1 {
-    max-width: 100%;
-    height: 96vh;
-    margin: 20pt 0pt;
-    border-radius: 30pt;
-    background-image: url('../images/theme/portrait.jpg');      
-    background-position: center center;      
-    background-repeat: no-repeat;      
-    background-attachment: fixed;      
-    background-size: cover;      
-    background-color: #04536d;
+.social-list li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+    height: 100%;
+    font-size: 34px;
+    font-weight: 130%;
+    font-style: normal;
+    font-family: 'Train One', cursive;
+    text-decoration: none;
+    color:black;
+}
+.icon {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.info-text {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+.info-text p {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 110%;
+    font-style: normal;
+    font-family: 'Pacifico', cursive;
     text-decoration: none;
+    color:black;
 }
-.pageLink { /*Ссылка элемента старницы в отдельном блоке, чтобы при скроле через якорь она была посередине*/
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-#page_2 {
-    max-width: 100%;
-    height: 96vh;
-    margin: 20pt 0pt;
-    border-radius: 30pt;
-    background-image: url('../images/theme/plans.jpg');      
-    background-position: center center;      
-    background-repeat: no-repeat;      
-    background-attachment: fixed;      
-    background-size: cover;      
-    background-color: #04536d;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;    
-}
-#page_3 {
-    max-width: 100%;
-    height: 96vh;
-    margin: 20pt 0pt;
-    border-radius: 30pt;
-    background-image: url('../images/theme/i_am.jpg');      
-    background-position: center center;      
-    background-repeat: no-repeat;      
-    background-attachment: fixed;      
-    background-size: cover;      
-    background-color: #04536d;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;    
-}
-#page_4 {
-    max-width: 100%;
-    height: 96vh;
-    margin: 20pt 0pt;
-    border-radius: 30pt;
-    background-image: url('../images/theme/mobile.jpg');      
-    background-position: center center;      
-    background-repeat: no-repeat;      
-    background-attachment: fixed;      
-    background-size: cover;      
-    background-color: #04536d;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;    
-}
-main div a {
-    text-decoration: none;
-}
-/*
-text-transform: uppercase - трансформация текста 
-word-spacing: 20px - расстояние между словами
-letter-spacing: 5px - рсстояние между символами
-line-height: 10px - расстояние между строками
-+ примемнение стилей к тексту: перечеркивание, подчеркивание и т.д.
-*/
-main a {
-    text-decoration: none;
-    color: #fff;
-    font-size: calc(30pt + 80 * (100vw / 1903)); /*80pt-40pt*/
-    font-weight: 600;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    text-transform: uppercase;
-    cursor: pointer;
-    opacity: 0.5;
-}
-main a:hover {
-    opacity: 0.8;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
+.logo {
+    width: 180px;
+    height: 110px;
+    background-image: url("../images/icon/logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
-/*Блок с ссылками*/
-/*div.social_link:hover a.link:not(:hover){
-    opacity: 0.5;
-}*/
-/* тоже самое что и снизу*/
-
-.testDiv { /*---------------DELETE----------------*/
-    position: relative;
-    left: 17%;
-    background-color: greenyellow;
-    max-width: 66%;
-    height: 200pt;
-    border-width: 10pt;
-    border-radius: 10pt;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+#instagram {
+    background-image: url("../images/icon/instagram.svg");
+}
+#telegram {
+    background-image: url("../images/icon/telegram.svg");
+}
+#vk {
+    background-image: url("../images/icon/vk.svg");
+}
+#yandex {
+    background-image: url("../images/icon/yandex.svg");
+}
+#behance {
+    background-image: url("../images/icon/behance.svg");
+}
+#git {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 122.58 122.58'%3e%3cdefs%3e%3cstyle%3e.cls-2%7bfill:%23000%7d%3c/style%3e%3c/defs%3e%3cpath d='M61.29 3.15A60.39 60.39 0 0 0 42.2 120.84c3 .56 4.13-1.31 4.13-2.91 0-1.44-.06-6.19-.09-11.24-16.8 3.65-20.34-7.13-20.34-7.13-2.75-7-6.71-8.83-6.71-8.83-5.48-3.75.42-3.67.42-3.67 6.06.42 9.25 6.22 9.25 6.22 5.39 9.23 14.13 6.56 17.58 5 .54-3.9 2.1-6.57 3.83-8.07-13.41-1.51-27.51-6.69-27.51-29.83A23.39 23.39 0 0 1 29 44.17c-.63-1.52-2.69-7.66.58-16 0 0 5.08-1.62 16.61 6.19a57.36 57.36 0 0 1 30.25 0C87.94 26.57 93 28.19 93 28.19c3.28 8.32 1.22 14.46.59 16a23.35 23.35 0 0 1 6.22 16.21c0 23.2-14.13 28.3-27.58 29.8 2.17 1.87 4.1 5.55 4.1 11.18 0 8.08-.07 14.58-.07 16.57 0 1.61 1.08 3.49 4.14 2.9A60.39 60.39 0 0 0 61.29 3.15Z' style='fill-rule:evenodd;fill:%23000'/%3e%3cpath class='cls-2' d='M23.77 89.85c-.13.3-.6.39-1 .19s-.68-.61-.54-.91.6-.4 1-.19.69.61.53.91ZM26.22 92.58c-.29.27-.85.14-1.23-.28a.92.92 0 0 1-.18-1.25c.3-.27.84-.15 1.24.27s.47 1 .17 1.26ZM28.6 96.06c-.37.26-1 0-1.35-.52s-.37-1.18 0-1.44 1 0 1.35.5.37 1.19 0 1.46ZM31.86 99.42c-.33.36-1 .26-1.55-.23a1.17 1.17 0 0 1-.31-1.55c.33-.36 1-.26 1.56.23s.69 1.19.33 1.55ZM36.36 101.37c-.14.47-.82.69-1.51.49s-1.13-.77-1-1.24.83-.7 1.52-.49 1.12.76 1 1.24ZM41.31 101.73c0 .5-.57.91-1.29.92s-1.3-.39-1.31-.88.57-.91 1.29-.92 1.31.39 1.31.88ZM45.9 101c.09.48-.41 1-1.12 1.12s-1.35-.18-1.44-.66.42-1 1.12-1.12 1.35.16 1.44.66Zm0 0'/%3e%3c/svg%3e");
 }
 
-#testAnim, div.test  { /*---------------DELETE----------------*/
-    color: blue;
-    background-color: crimson;
-    width: 20%;
-    border-width: 10pt;
-    border-radius: 10pt;
-    font-size: 60pt;
-    font-weight: 600;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    text-transform: uppercase;
-    margin: 10pt;
-    padding: 10pt;
-
-    position: relative;
-}
-#testAnim { /*---------------DELETE----------------*/
-    animation-name: Arrow1; /*Имя анимации для привязки к элементу*/
-    animation-duration: 3s; /*Время анимации*/
-    animation-timing-function: inline; /*Сценарий развития анимаций между ключивыми кадрами*/
-    animation-iteration-count: 2; /*Количкство повторов ключевых кадров в разах. infinite - анимация бесконечно*/
-    animation-direction: alternate; /*Тип и направление воспроизведения ключевых кадров*/
-    animation-play-state: running; /*Запуск или остановка анимации оп определенному событию наведение мыши и т.д.*/
-    animation-delay: 0s; /*Задержка перед началом анимации*/
-    animation-fill-mode: none; /*Применяемые свойства по завершению анимации*/
-}       
-@keyframes Arrow1{ /*---------------DELETE----------------*/
-    0% {
-        top: 0;
+@media screen and (max-width: 768px){
+    body {
+        background-image: url('../images/home-mobile.jpg');
     }
-    50% {
-        opacity: 0.5;
+    .wrapper {
+        min-height: 80vh;
+        gap: 10px;
+        padding: 10px 10px;
     }
-    100% {
-        top: 300px;
+    .social-list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .social-list li {
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .social-list li a {
+        gap: 20px;
+        max-width: 300px;
+        height: 100%;
+        padding: 0px 10px;
+        font-size: 30px;
+    }
+    .icon {
+        width: 44px;
+        height: 44px;
+    }
+    .info-text {
+        flex-direction: column;
+    }
+    .info-text p {
+        font-size: 20px;
+    }
+    .logo {
+        width: 130px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 425px){
+    body {
+        background-image: url('../images/home-mobile.jpg');
+    }
+    .wrapper {
+        min-height: 70vh;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+    .social-list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .social-list li {
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .social-list li a {
+        gap: 20px;
+        max-width: 250px;
+        height: 100%;
+        padding: 0px 10px;
+        font-size: 26px;
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+    .info-text {
+        flex-direction: column;
+    }
+    .info-text p {
+        width: 270px;
+        font-size: 16px;
+    }
+    .logo {
+        width: 130px;
+        height: 50px;
     }
 }
